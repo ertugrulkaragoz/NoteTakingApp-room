@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AddFragment">
+
+  <EditText
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:id="@+id/note_title"
+      android:layout_marginTop="100dp"
+      android:hint="Title"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/note_body"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/note_title"
+        android:gravity="top|left"
+        android:hint="Note"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:padding="10dp"
+        android:scrollbars="vertical"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_check_24"
+        android:id="@+id/add_fab"/>
+</RelativeLayout>

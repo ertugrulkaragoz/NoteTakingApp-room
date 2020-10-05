@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notetaking.ui.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_add"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_home_to_update"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.notetaking.ui.fragment.AddFragment"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_add_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.notetaking.ui.fragment.UpdateFragment"
+        android:label="Update Note"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_update_to_home"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="currentNote"
+            app:argType="com.example.notetaking.model.Note" />
+    </fragment>
+</navigation>
